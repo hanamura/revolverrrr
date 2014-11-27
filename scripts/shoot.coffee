@@ -10,6 +10,8 @@ module.exports = (robot) ->
     return if data.user.screen_name isnt from
     return if data.entities.user_mentions.length
 
+    console.log "Checking tweet: \"#{text}\""
+
     switch
 
       # CROSS MARK: http://www.fileformat.info/info/unicode/char/274c/index.htm
@@ -29,3 +31,5 @@ module.exports = (robot) ->
 
     if Math.random() < rate
       msg.send text
+
+      console.log "Updated status: \"#{text}\""
