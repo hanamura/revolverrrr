@@ -1,0 +1,15 @@
+{
+  "name": "revolverrrr",
+  "version": "0.1.0",
+  "author": "Taro Hanamura <m@hanamurataro.com>",
+  "description": "Shoot a tweet",
+  "dependencies": {
+    "hubot": "2.9.3",
+    "hubot-heroku-keepalive": "0.0.4",
+    "hubot-redis-brain": "0.0.2",
+    "hubot-twitter-userstream": "0.0.3"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
