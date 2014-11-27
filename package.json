@@ -14,5 +14,9 @@
   },
   "scripts": {
     "start": "bin/hubot -a twitter-userstream"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanamura/revolverrrr.git"
   }
 }
