@@ -1,6 +1,7 @@
 {
   "name": "revolverrrr",
   "version": "0.1.0",
+  "license": "MIT",
   "author": "Taro Hanamura <m@hanamurataro.com>",
   "description": "Shoot a tweet",
   "dependencies": {
