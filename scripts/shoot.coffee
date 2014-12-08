@@ -9,6 +9,7 @@ module.exports = (robot) ->
 
     return if data.user.screen_name isnt from
     return if data.entities.user_mentions.length
+    return if data.entities.media
 
     console.log "Checking tweet: \"#{text}\""
 
