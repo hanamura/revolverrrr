@@ -1,17 +1,20 @@
 module.exports = (robot) ->
 
-  from = process.env.HUBOT_SOURCE_NAME
-  throw new Error 'HUBOT_SOURCE_NAME missing' unless from
+  unless process.env.HUBOT_SOURCE_NAME
+    throw new Error 'HUBOT_SOURCE_NAME missing'
+
+  sources = process.env.HUBOT_SOURCE_NAME
+  sources.split(/\s*,\s*/).filter (x) -> x
 
   robot.hear /(.+)/, (msg) ->
     data = msg.message.data
     text = msg.message.data.text
 
-    return if data.user.screen_name isnt from
+    return unless ~ sources.indexOf data.user.screen_name
     return if data.entities.user_mentions.length
     return if data.entities.media
 
-    console.log "Checking tweet: \"#{text}\""
+    console.log "@#{data.user.screen_name}: “#{text}”"
 
     switch
 
@@ -45,4 +48,4 @@ module.exports = (robot) ->
     if Math.random() < rate
       msg.send text
 
-      console.log "Updated status: \"#{text}\""
+      console.log "@#{process.env.HUBOT_NAME}: “#{text}”"
