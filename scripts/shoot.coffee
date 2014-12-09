@@ -32,7 +32,8 @@ module.exports = (robot) ->
            text.indexOf("\ud83d\udd13 ") is 0, \ # OPEN LOCK
            text.indexOf("\ud83d\udd0a ") is 0, \ # SPEAKER WITH THREE SOUND WAVES
            text.indexOf("\ud83d\udce2 ") is 0, \ # PUBLIC ADDRESS LOUDSPEAKER
-           text.indexOf("\ud83d\udce3 ") is 0    # CHEERING MEGAPHONE
+           text.indexOf("\ud83d\udce3 ") is 0, \ # CHEERING MEGAPHONE
+           text.indexOf("\u267b\ufe0f ") is 0    # RECYCLING SYMBOL
         text = text.substr 3
         rate = 1
 
