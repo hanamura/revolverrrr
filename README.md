@@ -45,17 +45,17 @@ heroku addons:add rediscloud
 
 ## Tweet from source account
 
-```
-This tweet may possibly be copied.
-```
+Normal (copied about once every 10 times):
 
-```
-🙅 This tweet will never be copied.
-```
+> This tweet may possibly be copied.
 
-```
-🙆 This tweet will always be copied.
-```
+Prevent copy:
+
+> :no_good: This tweet will never be copied.
+
+Force copy:
+
+> :ok_woman: This tweet will always be copied.
 
 ### Prefix emojis to prevent copy
 
